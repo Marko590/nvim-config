@@ -1,1 +1,1 @@
-Nvim config
+Nvim config test2
