@@ -35,17 +35,15 @@ return {
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
 			})
-      lspconfig.cssls.setup({
-        capabilities=capabilities,
-      })
-      lspconfig.prettier.setup({
-        capabilities=capabilities,
-      })
-      lspconfig.tailwindcss.setup(
-        {
-          capabilities=capabilities,
-        }
-      )
+			lspconfig.cssls.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.tailwindcss.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.eslint.setup({
+				capabilities = capabilities,
+			})
 			lspconfig.intelephense.setup({
 				root_dir = function()
 					return vim.loop.cwd()
