@@ -23,29 +23,16 @@ return {
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 			local lspconfig = require("lspconfig")
-		lspconfig.ts_ls.setup({
-				capabilities = capabilities,
-			})	
-			lspconfig.solargraph.setup({
-				capabilities = capabilities,
+
+			lspconfig.ts_ls.setup({
+				capabilites=capabilities
 			})
-			lspconfig.html.setup({
-				capabilities = capabilities,
-			})
-			lspconfig.lua_ls.setup({
-				capabilities = capabilities,
-			})
+      lspconfig.html.setup({
+        capabilities=capabilities
+      })
 			lspconfig.tailwindcss.setup({
-				capabilities = capabilities,
-			})
-			--lspconfig.eslint.setup({
-			--	capabilities = capabilities,
-			--})
-			lspconfig.intelephense.setup({
-				root_dir = function()
-					return vim.loop.cwd()
-				end,
-			})
+				capabilities=capabilities
+				})
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
 			vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})

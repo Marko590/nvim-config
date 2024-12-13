@@ -25,7 +25,7 @@ return {
 		map("n", "<A-8>", "<Cmd>BufferGoto 8<CR>", opts)
 		map("n", "<A-9>", "<Cmd>BufferGoto 9<CR>", opts)
 		map("n", "<A-0>", "<Cmd>BufferLast<CR>", opts)
-		map("n", "<A-c>", "<Cmd>BufferClose<CR>", opts)
+		map("n", "<A-q>", "<Cmd>BufferClose<CR>", opts)
 		require("barbar").setup({ opts, map })
 	end,
 	version = "^1.0.0",
