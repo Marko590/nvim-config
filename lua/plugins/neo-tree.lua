@@ -17,7 +17,11 @@ return {
               require("neo-tree.command").execute({ action = "close" })
             end
           },
-        }
+        },
+        filesystem ={
+        follow_current_file=true,
+        hijack_netrw=true,
+      }
       })
   end,
 }

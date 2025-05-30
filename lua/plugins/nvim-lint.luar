@@ -6,13 +6,14 @@ return {
 		local lint = require("lint")
 
 		lint.linters_by_ft = {
-			javascript = { "ts-standard" },
-			typescript = { "prettierd" },
-			javascriptreact = { "prettierd" },
-			typescriptreact = { "ts-standard" },
-			svelte = { "prettierd" },
-			python = { "pylint" },
-		}
+typescript = { { "prettierd", "prettier" } },
+				typescriptreact = { { "prettierd", "prettier" } },
+				javascript = { { "prettierd", "prettier" } },
+				javascriptreact = { { "prettierd", "prettier" } },
+				json = { { "prettierd", "prettier" } },
+				html = { { "prettierd", "prettier" } },
+				css = { { "prettierd", "prettier" } },
+	}
 
 		local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
 
